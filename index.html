@@ -9,19 +9,18 @@
 <style>
 * {
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #111;
-    color: #fff;
+    color: white;
 }
 
 header {
     text-align: center;
-    padding: 35px 15px;
+    padding: 38px 15px;
     background: #080808;
     border-bottom: 2px solid #d9ad28;
 }
@@ -34,63 +33,64 @@ header h1 {
 }
 
 header p {
+    color: #ddd;
     font-size: 12px;
     letter-spacing: 2px;
-    color: #ddd;
 }
 
 nav {
     display: flex;
-    justify-content: center;
     gap: 8px;
-    padding: 15px 8px;
+    padding: 18px 10px;
+    justify-content: center;
     background: #111;
-    position: sticky;
-    top: 0;
-    z-index: 10;
 }
 
-nav a {
+nav button {
     flex: 1;
-    max-width: 160px;
-    text-align: center;
-    text-decoration: none;
+    max-width: 180px;
+    padding: 14px 5px;
+    border: none;
+    border-radius: 6px;
     background: #d9ad28;
     color: #111;
-    padding: 13px 4px;
-    border-radius: 6px;
-    font-size: 13px;
     font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
 }
 
-nav a:hover {
+nav button:hover,
+nav button.activo {
     background: #fff;
 }
 
-section {
+.contenido {
+    display: none;
     max-width: 750px;
     margin: auto;
-    padding: 25px 18px;
+    padding: 20px;
+}
+
+.contenido.activo {
+    display: block;
 }
 
 h2 {
-    text-align: center;
     color: #f1c232;
+    text-align: center;
     border-bottom: 1px solid #d9ad28;
     padding-bottom: 12px;
-    font-size: 25px;
 }
 
 h3 {
     color: #f1c232;
     margin-top: 28px;
-    font-size: 17px;
 }
 
 .item {
     display: flex;
     justify-content: space-between;
-    gap: 12px;
+    gap: 10px;
     padding: 12px 4px;
     border-bottom: 1px solid #333;
     font-size: 14px;
@@ -102,45 +102,30 @@ h3 {
     white-space: nowrap;
 }
 
-.nota {
-    color: #aaa;
+.datos {
     text-align: center;
-    font-size: 12px;
-    margin-top: 18px;
+    line-height: 2;
 }
 
-.boton-contacto {
-    display: inline-block;
-    background: #d9ad28;
-    color: #111;
+.datos strong {
+    color: #f1c232;
+}
+
+.datos a {
+    color: #f1c232;
     text-decoration: none;
-    padding: 12px 22px;
-    border-radius: 6px;
-    font-weight: bold;
-    margin-top: 12px;
 }
 
 footer {
-    background: #080808;
-    border-top: 2px solid #d9ad28;
     text-align: center;
-    padding: 30px 15px;
-    line-height: 2;
-    font-size: 14px;
+    padding: 18px;
+    color: #999;
+    font-size: 12px;
 }
 
-footer strong {
-    color: #f1c232;
-}
-
-footer a {
-    color: #f1c232;
-    text-decoration: none;
-}
-
-@media (max-width: 380px) {
-    nav a {
-        font-size: 11px;
+@media(max-width: 380px) {
+    nav button {
+        font-size: 10px;
         padding: 12px 2px;
     }
 }
@@ -155,58 +140,46 @@ footer a {
 </header>
 
 <nav>
-    <a href="#comida">COMIDA</a>
-    <a href="#bebidas">BEBIDAS</a>
-    <a href="#promociones">PROMOCIONES</a>
+    <button class="activo" onclick="mostrar('comida', this)">
+        COMIDA
+    </button>
+
+    <button onclick="mostrar('bebidas', this)">
+        BEBIDAS
+    </button>
+
+    <button onclick="mostrar('datos', this)">
+        LOCAL
+    </button>
 </nav>
 
-<!-- COMIDA -->
+<section id="comida" class="contenido activo">
 
-<section id="comida">
     <h2>COMIDA</h2>
 
     <h3>PARA COMPARTIR</h3>
     <div class="item"><span>Chorrillanas grandes</span></div>
     <div class="item"><span>Papas fritas</span></div>
-
-    <h3>SALCHIPAPAS</h3>
     <div class="item"><span>Salchipapas</span></div>
 
-    <h3>SÁNDWICHES</h3>
+    <h3>SÁNDWICHES Y COMPLETOS</h3>
     <div class="item"><span>Sándwich de mechada</span></div>
     <div class="item"><span>Sándwich lomito de cerdo</span></div>
-
-    <h3>COMPLETOS</h3>
     <div class="item"><span>Completos</span></div>
 
-    <h3>PIZZAS FAMILIARES</h3>
+    <h3>OTROS</h3>
     <div class="item"><span>Pizzas familiares</span></div>
-
-    <h3>TABLAS</h3>
-    <div class="item"><span>Tablas para compartir</span></div>
-
-    <h3>EMPANADAS GRANDES</h3>
+    <div class="item"><span>Tablas</span></div>
     <div class="item"><span>Empanadas grandes</span></div>
+    <div class="item"><span>Menú</span></div>
 
-    <h3>MENÚ</h3>
-    <div class="item"><span>Menú del restaurante</span></div>
-
-    <p class="nota">
-        Consulta variedades y precios en el local.
-    </p>
 </section>
 
-<!-- BEBIDAS -->
+<section id="bebidas" class="contenido">
 
-<section id="bebidas">
-    <h2>BEBIDAS</h2>
+    <h2>BEBIDAS Y PROMOCIONES</h2>
 
-    <h3>BEBESTIBLES</h3>
-    <p class="nota">
-        Bebestibles de las páginas 1, 2 y 3 de la carta original.
-    </p>
-
-    <h3>COMBINADOS Y PROMOCIONES</h3>
+    <h3>PROMOCIONES HASTA LAS 01:00 AM</h3>
 
     <div class="item">
         <span>2 Combinado Johnnie Red</span>
@@ -297,49 +270,72 @@ footer a {
         <span>2 Shot de tequila</span>
         <strong class="precio">$4.000</strong>
     </div>
+
 </section>
 
-<!-- PROMOCIONES -->
+<section id="datos" class="contenido datos">
 
-<section id="promociones">
-    <h2>PROMOCIONES</h2>
+    <h2>DATOS DEL LOCAL</h2>
 
-    <h3>HASTA LAS 01:00 AM</h3>
+    <h3>CRAZYBAR</h3>
 
-    <p class="nota">
-        Promociones para compartir.
-        Revisa nuestros combinados y ofertas
-        disponibles en la sección de bebidas.
+    <strong>RESTAURANTE · COMIDA TRADICIONAL CHILENA</strong>
+
+    <p>De lunes a domingo</p>
+
+    <p>
+        Av. 5 de Abril 5187<br>
+        Estación Central
     </p>
 
-    <div style="text-align:center">
-        <a href="#bebidas" class="boton-contacto">
-            VER PROMOCIONES
+    <p>
+        Reservas:<br>
+        <strong>+56 9 6482 3001</strong>
+    </p>
+
+    <p>
+        <a href="https://wa.me/56964823001">
+            CONTACTAR POR WHATSAPP
         </a>
-    </div>
+    </p>
+
+    <p>
+        <a href="https://www.instagram.com/crazybarcl/"
+           target="_blank">
+            INSTAGRAM @CRAZYBARCL
+        </a>
+    </p>
+
 </section>
 
-<!-- DATOS DEL LOCAL -->
-
 <footer>
-    <strong>CRAZYBAR</strong><br>
-    RESTAURANTE · COMIDA TRADICIONAL CHILENA<br>
+    CRAZYBAR
+</footer>
 
-    De lunes a domingo<br>
+<script>
+function mostrar(seccion, boton) {
 
-    Av. 5 de Abril 5187<br>
-    Estación Central<br>
+    let contenidos = document.querySelectorAll('.contenido');
+    let botones = document.querySelectorAll('nav button');
 
-    Reservas: +56 9 6482 3001<br>
+    contenidos.forEach(function(item) {
+        item.classList.remove('activo');
+    });
 
-    <a href="https://wa.me/56964823001">
-        CONTACTAR POR WHATSAPP
-    </a>
-    <br>
+    botones.forEach(function(item) {
+        item.classList.remove('activo');
+    });
 
-    <a href="https://www.instagram.com/crazybarcl/"
-       target="_blank">
-        INSTAGRAM @CRAZYBARCL
+    document.getElementById(seccion).classList.add('activo');
+    boton.classList.add('activo');
+
+    window.scrollTo(0, 0);
+}
+</script>
+
+</body>
+</html>
+
     </a>
 </footer>
 
