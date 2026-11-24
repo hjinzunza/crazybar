@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRAZYBAR | Carta Digital</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    padding: 35px 15px;
+    background: #080808;
+    border-bottom: 2px solid #d9ad28;
+}
+
+header h1 {
+    color: #f1c232;
+    font-size: 42px;
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+header p {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #ddd;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 15px 8px;
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    flex: 1;
+    max-width: 160px;
+    text-align: center;
+    text-decoration: none;
+    background: #d9ad28;
+    color: #111;
+    padding: 13px 4px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background: #fff;
+}
+
+section {
+    max-width: 750px;
+    margin: auto;
+    padding: 25px 18px;
+}
+
+h2 {
+    text-align: center;
+    color: #f1c232;
+    border-bottom: 1px solid #d9ad28;
+    padding-bottom: 12px;
+    font-size: 25px;
+}
+
+h3 {
+    color: #f1c232;
+    margin-top: 28px;
+    font-size: 17px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 4px;
+    border-bottom: 1px solid #333;
+    font-size: 14px;
+}
+
+.precio {
+    color: #f1c232;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.nota {
+    color: #aaa;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 18px;
+}
+
+.boton-contacto {
+    display: inline-block;
+    background: #d9ad28;
+    color: #111;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+footer {
+    background: #080808;
+    border-top: 2px solid #d9ad28;
+    text-align: center;
+    padding: 30px 15px;
+    line-height: 2;
+    font-size: 14px;
+}
+
+footer strong {
+    color: #f1c232;
+}
+
+footer a {
+    color: #f1c232;
+    text-decoration: none;
+}
+
+@media (max-width: 380px) {
+    nav a {
+        font-size: 11px;
+        padding: 12px 2px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>CRAZYBAR</h1>
+    <p>RESTAURANTE · COMIDA TRADICIONAL CHILENA</p>
+</header>
+
+<nav>
+    <a href="#comida">COMIDA</a>
+    <a href="#bebidas">BEBIDAS</a>
+    <a href="#promociones">PROMOCIONES</a>
+</nav>
+
+<!-- COMIDA -->
+
+<section id="comida">
+    <h2>COMIDA</h2>
+
+    <h3>PARA COMPARTIR</h3>
+    <div class="item"><span>Chorrillanas grandes</span></div>
+    <div class="item"><span>Papas fritas</span></div>
+
+    <h3>SALCHIPAPAS</h3>
+    <div class="item"><span>Salchipapas</span></div>
+
+    <h3>SÁNDWICHES</h3>
+    <div class="item"><span>Sándwich de mechada</span></div>
+    <div class="item"><span>Sándwich lomito de cerdo</span></div>
+
+    <h3>COMPLETOS</h3>
+    <div class="item"><span>Completos</span></div>
+
+    <h3>PIZZAS FAMILIARES</h3>
+    <div class="item"><span>Pizzas familiares</span></div>
+
+    <h3>TABLAS</h3>
+    <div class="item"><span>Tablas para compartir</span></div>
+
+    <h3>EMPANADAS GRANDES</h3>
+    <div class="item"><span>Empanadas grandes</span></div>
+
+    <h3>MENÚ</h3>
+    <div class="item"><span>Menú del restaurante</span></div>
+
+    <p class="nota">
+        Consulta variedades y precios en el local.
+    </p>
+</section>
+
+<!-- BEBIDAS -->
+
+<section id="bebidas">
+    <h2>BEBIDAS</h2>
+
+    <h3>BEBESTIBLES</h3>
+    <p class="nota">
+        Bebestibles de las páginas 1, 2 y 3 de la carta original.
+    </p>
+
+    <h3>COMBINADOS Y PROMOCIONES</h3>
+
+    <div class="item">
+        <span>2 Combinado Johnnie Red</span>
+        <strong class="precio">$9.900</strong>
+    </div>
+
+    <div class="item">
+        <span>2 Jack Daniel's N°7 o Honey</span>
+        <strong class="precio">$14.900</strong>
+    </div>
+
+    <div class="item">
+        <span>2 Combinado Alto o Mistral</span>
+        <strong class="precio">$7.900</strong>
+    </div>
+
+    <div class="item">
+        <span>2 Combinado Gin</span>
+        <strong class="precio">$9.900</strong>
+    </div>
+
+    <div class="item">
+        <span>2 Combinado Ron Havana</span>
+        <strong class="precio">$9.900</strong>
+    </div>
+
+    <div class="item">
+        <span>2 Tropical Gin</span>
+        <strong class="precio">$12.000</strong>
+    </div>
+
+    <div class="item">
+        <span>2 Coronas grandes</span>
+        <strong class="precio">$8.000</strong>
+    </div>
+
+    <div class="item">
+        <span>2 Shop Quilmes</span>
+        <strong class="precio">$5.900</strong>
+    </div>
+
+    <div class="item">
+        <span>2 Pisco Sour</span>
+        <strong class="precio">$8.000</strong>
+    </div>
+
+    <div class="item">
+        <span>2 Mojito tradicional</span>
+        <strong class="precio">$8.000</strong>
+    </div>
+
+    <div class="item">
+        <span>2 Mojitos sabores</span>
+        <strong class="precio">$9.000</strong>
+    </div>
+
+    <div class="item">
+        <span>2 Aperol</span>
+        <strong class="precio">$11.900</strong>
+    </div>
+
+    <div class="item">
+        <span>2 Ramazzotti</span>
+        <strong class="precio">$11.900</strong>
+    </div>
+
+    <div class="item">
+        <span>2 Heineken o Royal litro</span>
+        <strong class="precio">$8.000</strong>
+    </div>
+
+    <div class="item">
+        <span>2 Stella o Budweiser litro</span>
+        <strong class="precio">$8.000</strong>
+    </div>
+
+    <div class="item">
+        <span>2 Micheladas Shop Quilmes</span>
+        <strong class="precio">$7.700</strong>
+    </div>
+
+    <div class="item">
+        <span>2 Terremotos</span>
+        <strong class="precio">$6.000</strong>
+    </div>
+
+    <div class="item">
+        <span>2 Shot de tequila</span>
+        <strong class="precio">$4.000</strong>
+    </div>
+</section>
+
+<!-- PROMOCIONES -->
+
+<section id="promociones">
+    <h2>PROMOCIONES</h2>
+
+    <h3>HASTA LAS 01:00 AM</h3>
+
+    <p class="nota">
+        Promociones para compartir.
+        Revisa nuestros combinados y ofertas
+        disponibles en la sección de bebidas.
+    </p>
+
+    <div style="text-align:center">
+        <a href="#bebidas" class="boton-contacto">
+            VER PROMOCIONES
+        </a>
+    </div>
+</section>
+
+<!-- DATOS DEL LOCAL -->
+
+<footer>
+    <strong>CRAZYBAR</strong><br>
+    RESTAURANTE · COMIDA TRADICIONAL CHILENA<br>
+
+    De lunes a domingo<br>
+
+    Av. 5 de Abril 5187<br>
+    Estación Central<br>
+
+    Reservas: +56 9 6482 3001<br>
+
+    <a href="https://wa.me/56964823001">
+        CONTACTAR POR WHATSAPP
+    </a>
+    <br>
+
+    <a href="https://www.instagram.com/crazybarcl/"
+       target="_blank">
+        INSTAGRAM @CRAZYBARCL
+    </a>
+</footer>
+
+</body>
+</html>
